@@ -1,4 +1,4 @@
-import pygame
+import pygame as pg
 from pygame.locals import *
 
 from globals import *
@@ -8,17 +8,17 @@ class App:
       self._running = True
       self._display_surf = None
       self.size = self.weight, self.height = WIDTH, HEIGHT
-      self.fps = pygame.time.Clock()
+      self.fps = pg.time.Clock()
 
-      pygame.display.set_caption("Shadowflame")
+      pg.display.set_caption("Shadowflame")
 
    def on_init(self):
-      pygame.init()
-      self._display_surf = pygame.display.set_mode(self.size, pygame.HWSURFACE | pygame.DOUBLEBUF)
+      pg.init()
+      self._display_surf = pg.display.set_mode(self.size, pg.HWSURFACE | pg.DOUBLEBUF)
       self._running = True
    
    def on_event(self, event):
-      if event.type == pygame.QUIT:
+      if event.type == pg.QUIT:
          self._running = False
    
    def on_loop(self):
@@ -28,14 +28,14 @@ class App:
       pass
 
    def on_cleanup(self):
-      pygame.quit()
+      pg.quit()
    
    def on_execute(self):
       if self.on_init() == False:
          self._running = False
       
       while(self._running):
-         for event in pygame.event.get():
+         for event in pg.event.get():
             self.on_event(event)
          self.on_loop()
          self.on_render()
@@ -43,4 +43,4 @@ class App:
       self.on_cleanup()
    
    def draw_circle(self):
-      pygame.draw.circle(self._display_surf, (255, 0, 0), (WIDTH/2, HEIGHT/2), 50)
+      pg.draw.circle(self._display_surf, (255, 0, 0), (WIDTH/2, HEIGHT/2), 50)
