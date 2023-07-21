@@ -3,6 +3,7 @@ from pygame.locals import *
 
 from globals import *
 from player import Player
+from colors import Colors
 
 #Initialization
 pygame.init()
@@ -11,8 +12,9 @@ current_width, current_height = display_info.current_w, display_info.current_h
 #screen = pygame.display.set_mode((current_width, current_height), pygame.FULLSCREEN)
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
-# Setup player
+# Setup objects
 p1 = Player()
+colors = Colors()
 
 running = True
 while running:
@@ -23,7 +25,7 @@ while running:
          if event.key == K_ESCAPE:
             running = False
    
-   screen.fill((0, 0, 0))
+   screen.fill(colors.BLACK)
    #vert grid
    #for _ in range(1, GRID_DEPTH, 1):
    #   pygame.draw.line(screen, (255, 255, 255), (current_width * (_/GRID_DEPTH), 0), (current_width * (_/GRID_DEPTH), current_height))
