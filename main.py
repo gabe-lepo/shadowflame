@@ -4,7 +4,9 @@ from pygame.locals import *
 from globals import *
 
 pygame.init()
-screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
+display_info = pygame.display.Info()
+current_width, current_height = display_info.current_w, display_info.current_h
+screen = pygame.display.set_mode((current_width, current_height), pygame.FULLSCREEN)
 
 running = True
 circle_x = (1/2) * WIDTH
