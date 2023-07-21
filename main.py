@@ -9,8 +9,8 @@ current_width, current_height = display_info.current_w, display_info.current_h
 screen = pygame.display.set_mode((current_width, current_height), pygame.FULLSCREEN)
 
 running = True
-circle_x = (1/2) * WIDTH
-circle_y = (1/2) * HEIGHT
+circle_x = (1/2) * current_width
+circle_y = (1/2) * current_height
 circle_radius = MAX_SIZE / 2
 while running:
    for event in pygame.event.get():
@@ -39,10 +39,10 @@ while running:
    screen.fill((0, 0, 0))
    #vert grid
    for _ in range(1, GRID_DEPTH, 1):
-      pygame.draw.line(screen, (255, 255, 255), (WIDTH * (_/GRID_DEPTH), 0), (WIDTH * (_/GRID_DEPTH), HEIGHT))
+      pygame.draw.line(screen, (255, 255, 255), (current_width * (_/GRID_DEPTH), 0), (current_width * (_/GRID_DEPTH), current_height))
    #horiz grid
    for _ in range(1, GRID_DEPTH, 1):
-      pygame.draw.line(screen, (255, 255, 255), (0, HEIGHT * (_/GRID_DEPTH)), (WIDTH, HEIGHT * (_/GRID_DEPTH)))
+      pygame.draw.line(screen, (255, 255, 255), (0, current_height * (_/GRID_DEPTH)), (current_width, current_height * (_/GRID_DEPTH)))
 
    pygame.draw.circle(screen, (255, 0, 0), (circle_x, circle_y), circle_radius)
    pygame.display.update()
