@@ -41,3 +41,6 @@ class App:
          self.on_render()
       
       self.on_cleanup()
+   
+   def draw_circle(self):
+      pygame.draw.circle(self._display_surf, (255, 0, 0), (WIDTH/2, HEIGHT/2), 50)
