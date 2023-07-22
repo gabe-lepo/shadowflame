@@ -1,29 +1,28 @@
 # shadowflame
-The Seven Pages: Shadowflame - A text-based RPG that follows the story of <i>3 heroes</i> and the demon king <i>Lahzranak</i>
----
-## Goort the Rogue
-### Basic stats
-- Health
-- Armor
-- Lockpicking
-- Pickpocketing
-- Persuasion
-### Hidden stats
-- Hit chance modifier
-- Critical chance modifier
-### Actions
-- Attack
-   - Hit - <i>Basic damage</i>
-   - Critical hit - <i>(damage*2)*0.75</i>
-   - Miss - <i>No damage</i>
-- Dodge
-   - Basic dodge - <i>Doesnt take damage</i>
-   - Critical dodge - <i>Next action is always successfully or critical</i>
-- Stealth
-   - Move - <i>Is not detected</i>
-   - Attack - <i>50% of normal damage, but always hits</i>
-      - Hit - <i>damage*0.5</i>
-      - Crit - <i>(damage*2)*0.25</i>
-- Persuade
-   - Success - <i>NPC highlights perfect path</i>
-   - Fail - <i>Is blocked from "perfect path" option</i>
+
+## Theme ideas
+- Futuristic, cyber-punk, mystery
+- Blade runner
+- Need intro sequence explaining backstory (eldensouls-esque) that gives breadcrumbs that dont make sense until you've played the game
+- dark color palette / neon scifi
+
+## Character ideas
+- Trained (ex-black ops private investigator) anti-hero needs to break into some place or solve some mystery
+- Smokes cigarettes
+- cyborg (ghost in the shell - Batou | cowboy bebop - Jet)
+- Traumatized
+
+## Mission
+- Solve <i>the</i> mystery
+- 
+
+# TODO
+- The Mystery
+## Gameplay mechanics
+- sidescroller
+- player feels small in large technocratic world
+- 2.5 dimensions (background moves at x rate, foreground moves at y rate)
+- Boss mechanic: Multiple surprise phases
+    - At least one boss has to be unbeatable
+## Sound/Music
+- 
